@@ -10,5 +10,6 @@ oslotest
 sphinx
 sphinxcontrib-pecanwsme
 sphinxcontrib-httpdomain
+opencafe
 requests
 testtools
