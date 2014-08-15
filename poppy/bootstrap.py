@@ -50,7 +50,6 @@ class Bootstrap(object):
         self.driver_conf = self.conf[_DRIVER_GROUP]
 
         log.setup('poppy')
-
         LOG.debug("init bootstrap")
 
     @decorators.lazy_property(write=False)

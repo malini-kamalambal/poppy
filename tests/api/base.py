@@ -45,15 +45,14 @@ class TestBase(fixtures.BaseTestFixture):
         auth_token = cls.auth_client.get_auth_token(cls.auth_config.base_url,
                                                     cls.auth_config.user_name,
                                                     cls.auth_config.api_key)
-
-        cls.config = config.CDNConfig()
+        cls.config = config.PoppyConfig()
         cls.url = cls.config.base_url
 
         cls.client = client.CDNClient(cls.url, auth_token,
                                       serialize_format='json',
                                       deserialize_format='json')
 
-        cls.server_config = config.CDNServerConfig()
+        cls.server_config = config.PoppyServerConfig()
 
         if cls.server_config.run_server:
             conf_path = os.environ["POPPY_TESTS_CONFIGS_DIR"]
